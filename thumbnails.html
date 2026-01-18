@@ -100,7 +100,7 @@
 
                 <!-- Logo -->
                 <div class="flex-shrink-0 flex items-center justify-center md:justify-start flex-1 md:flex-none">
-                    <a href="#" class="font-serif text-2xl font-bold tracking-wider text-brand-green1">
+                    <a href="./index" class="font-serif text-2xl font-bold tracking-wider text-brand-green1">
                         TECHSTACITY
                     </a>
                 </div>
@@ -108,12 +108,12 @@
                 <!-- Desktop Navigation -->
                 <div class="hidden md:flex space-x-8 items-center">
                     <a href="#home" class="text-sm uppercase tracking-widest hover:text-brand-green2 transition-colors">Home</a>
-                    <a href="#collection" class="text-sm uppercase tracking-widest hover:text-brand-green2 transition-colors">Portfoio</a>
+                    <a href="#collection" class="text-sm uppercase tracking-widest hover:text-brand-green2 transition-colors">Portfolio</a>
                     <a href="#about" class="text-sm uppercase tracking-widest hover:text-brand-green2 transition-colors">Our Clients</a>
                     <a href="#contact" class="text-sm uppercase tracking-widest hover:text-brand-green2 transition-colors">Contact</a>
                 </div>
 
-              
+
             </div>
         </div>
 
@@ -276,12 +276,17 @@
             </div>
 
             <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
-                <p class="text-gray-500 text-xs">&copy; 2025 Techstacity. All rights reserved.</p>
-                <div class="flex space-x-4">
-                    <a href="#" class="text-gray-400 hover:text-white"><i data-lucide="instagram" class="w-5 h-5"></i></a>
-                    <a href="#" class="text-gray-400 hover:text-white"><i data-lucide="facebook" class="w-5 h-5"></i></a>
-                    <a href="#" class="text-gray-400 hover:text-white"><i data-lucide="twitter" class="w-5 h-5"></i></a>
-                </div>
+              <p class="text-gray-500 text-xs">&copy; <span id="date">2025</span> Techstacity. All rights reserved.</p>
+              <script type="text/javascript">
+              const d = new Date();
+              document.getElementById("date").innerHTML = d.getFullYear();
+
+              </script>
+              <div class="flex space-x-4">
+                  <a href="https://facebook.com/thetechstacity" class="text-gray-400 hover:text-white"><i data-lucide="facebook" class="w-5 h-5"></i></a>
+                  <a href="https://x.com/thetechstacity" class="text-gray-400 hover:text-white"><i data-lucide="twitter" class="w-5 h-5"></i></a>
+                  <a href="https://tiktok.com/@techstacity" class="text-gray-400 hover:text-white"><i data-lucide="tiktok" class="w-5 h-5"></i></a>
+              </div>
             </div>
         </div>
     </footer>
@@ -291,20 +296,7 @@
         <!-- Backdrop -->
         <div id="cart-backdrop" onclick="toggleCart()" class="absolute inset-0 bg-black/50 opacity-0 transition-opacity duration-300 ease-in-out pointer-events-auto hidden"></div>
 
-        <!-- Sidebar -->
-        <div id="cart-panel" class="absolute right-0 top-0 h-full w-full max-w-md bg-white shadow-2xl transform translate-x-full transition-transform duration-300 ease-in-out pointer-events-auto flex flex-col">
-            <!-- Header -->
-            <div class="p-6 border-b border-gray-100 flex justify-between items-center">
-                <h2 class="font-serif text-xl font-bold text-brand-green2">Your Shopping Bag</h2>
-                <button onclick="toggleCart()" class="text-gray-500 hover:text-red-500 p-2">
-                    <i data-lucide="x" class="w-6 h-6"></i>
-                </button>
-            </div>
 
-
-
-
-        </div>
     </div>
 
     <!-- JavaScript Logic -->

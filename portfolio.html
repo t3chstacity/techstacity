@@ -71,7 +71,7 @@
                 <!-- Desktop Menu -->
                 <div class="hidden md:block">
                     <div class="ml-10 flex items-baseline space-x-8">
-                        <a href="#home" class="text-gray-300 hover:text-brand-gold px-3 py-2 rounded-md text-sm font-medium transition-colors">Home</a>
+                        <a href="index.html" class="text-gray-300 hover:text-brand-gold px-3 py-2 rounded-md text-sm font-medium transition-colors">Home</a>
                         <a href="#services" class="text-gray-300 hover:text-brand-gold px-3 py-2 rounded-md text-sm font-medium transition-colors">Services</a>
                         <a href="portfolio.html" class="text-gray-300 hover:text-brand-gold px-3 py-2 rounded-md text-sm font-medium transition-colors">Our Portfolio</a>
                         <a href="#gallery" class="text-gray-300 hover:text-brand-gold px-3 py-2 rounded-md text-sm font-medium transition-colors">Gallery</a>
@@ -94,7 +94,7 @@
         <!-- Mobile Menu -->
         <div class="md:hidden hidden bg-brand-blue border-t border-gray-700" id="mobile-menu">
             <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-                <a href="#home" onclick="toggleMobileMenu()" class="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Home</a>
+                <a href="index.html" onclick="toggleMobileMenu()" class="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Home</a>
                 <a href="#services" onclick="toggleMobileMenu()" class="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Services</a>
                 <a href="#gallery" onclick="toggleMobileMenu()" class="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Gallery</a>
                 <a href="#testimonials" onclick="toggleMobileMenu()" class="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Testimonials</a>
@@ -140,115 +140,116 @@
     </section>
 
     <!-- Project Gallery -->
-    <section id="gallery" class="py-24 bg-gray-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h3 class="text-3xl md:text-4xl font-bold text-brand-blue">Our Services</h3>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <!-- Gallery Item 1 -->
-                <div class="relative overflow-hidden rounded-xl h-64 shadow-md group">
-                    <img src="images/website_fochtec.png" alt="Solar Installation" class="gallery-img w-full h-full object-cover">
-                    <div class="absolute inset-0 bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                        <span class="text-white font-bold text-lg"><a href="https://fochtec.vercel.app" target="_blank" class="text-white hover:text-brand-gold">Website Design for Fochtec</a></span>
-                    </div>
-                </div>
-                <!-- Gallery Item 2 -->
-                <div class="relative overflow-hidden rounded-xl h-64 shadow-md group">
-                    <img src="images/jullz_honey.png" alt="CCTV Security" class="gallery-img w-full h-full object-cover">
-                    <div class="absolute inset-0 bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                        <span class="text-white font-bold text-lg">Jullz Honey Brand Strategy</span>
-                    </div>
-                </div>
-                <!-- Gallery Item 3 -->
-                <div class="relative overflow-hidden rounded-xl h-64 shadow-md group">
-                    <img src="images/mwas_autos.png" alt="Smart Lighting" class="gallery-img w-full h-full object-cover">
-                    <div class="absolute inset-0 bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                        <span class="text-white font-bold text-lg">Mwas Autos</span>
-                    </div>
-                </div>
-                <!-- Gallery Item 4 -->
-                <div class="relative overflow-hidden rounded-xl h-64 shadow-md group">
-                    <img src="images/business_cards.png" alt="Electrical Wiring" class="gallery-img w-full h-full object-cover">
-                    <div class="absolute inset-0 bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                        <span class="text-white font-bold text-lg">Business Card Design</span>
-                    </div>
-                </div>
-                <!-- Gallery Item 5 -->
-                <div class="relative overflow-hidden rounded-xl h-64 shadow-md group">
-                    <img src="images/miriams_boutique.png" alt="Electric Fencing" class="gallery-img w-full h-full object-cover">
-                    <div class="absolute inset-0 bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                        <span class="text-white font-bold text-lg">Miriam's Boutique Brand Strategy</span>
-                    </div>
-                </div>
-                <!-- Gallery Item 6 -->
-                <div class="relative overflow-hidden rounded-xl h-64 shadow-md group">
-                    <img src="images/nicah_spa.png" alt="Control Room" class="gallery-img w-full h-full object-cover">
-                    <div class="absolute inset-0 bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                        <span class="text-white font-bold text-lg">Nicah Spa Brand Strategy</span>
-                    </div>
-                </div>
-            </div>
+   <section id="gallery" class="py-24 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+            <h3 class="text-3xl md:text-4xl font-bold text-brand-blue">Our Services</h3>
         </div>
-    </section>
 
-    <!-- Testimonials Section -->
-    <section id="testimonials" class="py-24 bg-brand-blue text-white relative">
-        <!-- Decoration -->
-        <div class="absolute top-0 right-0 -mr-20 -mt-20 w-80 h-80 bg-brand-gold rounded-full opacity-10 blur-3xl"></div>
-        
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div class="text-center mb-16">
-                <h2 class="text-brand-gold font-bold tracking-wide uppercase text-sm mb-2">Testimonials</h2>
-                <h3 class="text-3xl md:text-4xl font-bold">What Our Clients Say</h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+            <div class="flex flex-col">
+                <div class="relative overflow-hidden rounded-xl h-64 shadow-md group mb-4">
+                    <img src="images/website_fochtec.png" alt="Website Design" class="gallery-img w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <span class="text-white font-bold text-lg"><a href="https://fochtec.vercel.app" target="_blank" class="text-white hover:text-brand-gold">View Project</a></span>
+                    </div>
+                </div>
+                <h4 class="text-lg font-bold text-brand-blue">Website Design</h4>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <!-- Testimonial 1 -->
-                <div class="bg-slate-800 p-8 rounded-2xl border border-slate-700">
-                    <div class="flex text-brand-gold mb-4">
-                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-                    </div>
-                    <p class="text-gray-300 mb-6 italic">"I can vouch for creative direction Techstacity gave us in regards to our product Jullz Honey. Much appreciated"</p>
-                    <div class="flex items-center">
-                        <div class="w-10 h-10 bg-slate-600 rounded-full flex items-center justify-center text-white font-bold">JW</div>
-                        <div class="ml-4">
-                            <p class="font-bold text-white">Julie Wanjiku, Jullz Honey</p>
-                        </div>
+            <div class="flex flex-col">
+                <div class="relative overflow-hidden rounded-xl h-64 shadow-md group mb-4">
+                    <img src="images/jullz_honey.png" alt="Brand Strategy" class="gallery-img w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <span class="text-white font-bold text-lg">View Details</span>
                     </div>
                 </div>
-
-                <!-- Testimonial 2 -->
-                <div class="bg-slate-800 p-8 rounded-2xl border border-slate-700 transform md:-translate-y-4 shadow-xl">
-                    <div class="flex text-brand-gold mb-4">
-                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-                    </div>
-                    <p class="text-gray-300 mb-6 italic">"With a solid brand profile created by Techstacity, our client trust has increased by 47%. This is an encouragement."</p>
-                    <div class="flex items-center">
-                        <div class="w-10 h-10 bg-slate-600 rounded-full flex items-center justify-center text-white font-bold">EK</div>
-                        <div class="ml-4">
-                            <p class="font-bold text-white">Edward Koigi, SpaceYaMagari</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Testimonial 3 -->
-                <div class="bg-slate-800 p-8 rounded-2xl border border-slate-700">
-                    <div class="flex text-brand-gold mb-4">
-                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-                    </div>
-                    <p class="text-gray-300 mb-6 italic">"If you are looking to set up your website, Techstacity comes in clutch. We were able to set up our digital presence for our home security clients to view our catalog."</p>
-                    <div class="flex items-center">
-                        <div class="w-10 h-10 bg-slate-600 rounded-full flex items-center justify-center text-white font-bold">FK</div>
-                        <div class="ml-4">
-                            <p class="font-bold text-white">Foch Karas, Fochtec</p>
-                        </div>
-                    </div>
-                </div>
+                <h4 class="text-lg font-bold text-brand-blue">Brand guides design</h4>
             </div>
-        </div>
-    </section>
+
+            <div class="flex flex-col">
+                <div class="relative overflow-hidden rounded-xl h-64 shadow-md group mb-4">
+                    <img src="images/mwas_autos.png" alt="Logo Design" class="gallery-img w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <span class="text-white font-bold text-lg">View Details</span>
+                    </div>
+                </div>
+                <h4 class="text-lg font-bold text-brand-blue">Logo Design</h4>
+            </div>
+            
+            <div class="flex flex-col">
+                <div class="relative overflow-hidden rounded-xl h-64 shadow-md group mb-4">
+                    <img src="images/business_cards.png" alt="Business Cards" class="gallery-img w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <span class="text-white font-bold text-lg">View Details</span>
+                    </div>
+                </div>
+                <h4 class="text-lg font-bold text-brand-blue">Business Cards</h4>
+            </div>
+
+            <div class="flex flex-col">
+                <div class="relative overflow-hidden rounded-xl h-64 shadow-md group mb-4">
+                    <img src="images/outdoor_branding.png" alt="Outdoor Branding" class="gallery-img w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <span class="text-white font-bold text-lg">View Details</span>
+                    </div>
+                </div>
+                <h4 class="text-lg font-bold text-brand-blue">Outdoor branding</h4>
+            </div>
+
+            <div class="flex flex-col">
+                <div class="relative overflow-hidden rounded-xl h-64 shadow-md group mb-4">
+                    <img src="images/company_profiles.png" alt="Company Profiles" class="gallery-img w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <span class="text-white font-bold text-lg">View Details</span>
+                    </div>
+                </div>
+                <h4 class="text-lg font-bold text-brand-blue">Company Profiles Design</h4>
+            </div>
+
+            <div class="flex flex-col">
+                <div class="relative overflow-hidden rounded-xl h-64 shadow-md group mb-4">
+                    <img src="images/banners_design.png" alt="Banners Design" class="gallery-img w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <span class="text-white font-bold text-lg">View Details</span>
+                    </div>
+                </div>
+                <h4 class="text-lg font-bold text-brand-blue">Banners Branding</h4>
+            </div>
+
+            <div class="flex flex-col">
+                <div class="relative overflow-hidden rounded-xl h-64 shadow-md group mb-4">
+                    <img src="images/product_labels.png" alt="Product Labels" class="gallery-img w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <span class="text-white font-bold text-lg">View Details</span>
+                    </div>
+                </div>
+                <h4 class="text-lg font-bold text-brand-blue">Product Labels</h4>
+            </div>
+
+            <div class="flex flex-col">
+                <div class="relative overflow-hidden rounded-xl h-64 shadow-md group mb-4">
+                    <img src="images/letterheads_design.png" alt="Letterheads Design" class="gallery-img w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <span class="text-white font-bold text-lg">View Details</span>
+                    </div>
+                </div>
+                <h4 class="text-lg font-bold text-brand-blue">Letterheads Design</h4>
+            </div>
+
+            <div class="flex flex-col">
+                <div class="relative overflow-hidden rounded-xl h-64 shadow-md group mb-4">
+                    <img src="images/video_editing.png" alt="Video Editing" class="gallery-img w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <span class="text-white font-bold text-lg">View Details</span>
+                    </div>
+                </div>
+                <h4 class="text-lg font-bold text-brand-blue">Video Editing</h4>
+            </div>
+
+            </div>
+    </div>
+</section>
 
     <!-- Contact Section -->
     <section id="contact" class="py-24 bg-white">
@@ -322,7 +323,7 @@
                 <div>
                     <h4 class="text-white font-bold mb-4">Quick Links</h4>
                     <ul class="space-y-2 text-gray-400 text-sm">
-                        <li><a href="#home" class="hover:text-brand-gold transition">Home</a></li>
+                        <li><a href="index.html" class="hover:text-brand-gold transition">Home</a></li>
                         <li><a href="#services" class="hover:text-brand-gold transition">Our Services</a></li>
                         <li><a href="portfolio.html" class="hover:text-brand-gold transition">Our Portfolio</a></li>
                         <li><a href="#gallery" class="hover:text-brand-gold transition">Project Gallery</a></li>

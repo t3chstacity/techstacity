@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foch Tec | Electrical, Solar & Security Solutions</title>
+    <meta name="description" content="Foch Tec specializes in electrical installations, CCTV, electric fencing, solar power, and smart home automation in Kenya.">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="shortcut icon" href="images/fochtec_logo.png" type="image/x-icon">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Outfit', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            blue: '#0f172a',    // Deep Slate for Trust/Security
+                            gold: '#fbbf24',    // Amber for Energy/Solar
+                            green: '#22c55e',   // Green for Eco/Smart
+                            light: '#f8fafc',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Custom Styles for better aesthetics */
+        .glass-nav {
+            background: rgba(15, 23, 42, 0.95);
+            backdrop-filter: blur(10px);
+        }
+        .hero-overlay {
+            background: linear-gradient(rgba(15, 23, 42, 0.7), rgba(15, 23, 42, 0.8));
+        }
+        .service-card:hover .service-icon {
+            transform: scale(1.1) rotate(-5deg);
+        }
+        .gallery-img {
+            transition: transform 0.3s ease-in-out;
+        }
+        .gallery-img:hover {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body class="font-sans text-gray-800 bg-gray-50 antialiased">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 glass-nav transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center gap-2">
+                    <div class="w-10 h-10 rounded flex items-center justify-center text-brand-blue font-bold text-xl">
+                        <img src="images/fochtec_logo_white.png" alt="" srcset="">
+                    </div>
+                    <span class="text-white text-2xl font-bold tracking-tight">Foch Tec</span>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="#home" class="text-gray-300 hover:text-brand-gold px-3 py-2 rounded-md text-sm font-medium transition-colors">Home</a>
+                        <a href="#services" class="text-gray-300 hover:text-brand-gold px-3 py-2 rounded-md text-sm font-medium transition-colors">Services</a>
+                        <a href="#gallery" class="text-gray-300 hover:text-brand-gold px-3 py-2 rounded-md text-sm font-medium transition-colors">Gallery</a>
+                        <a href="#testimonials" class="text-gray-300 hover:text-brand-gold px-3 py-2 rounded-md text-sm font-medium transition-colors">Testimonials</a>
+                        <a href="#contact" class="bg-brand-gold text-brand-blue hover:bg-yellow-400 px-5 py-2.5 rounded-full text-sm font-bold shadow-lg transition-transform hover:scale-105">
+                            Get Quote
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Mobile menu button -->
+                <div class="-mr-2 flex md:hidden">
+                    <button type="button" onclick="toggleMobileMenu()" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none transition">
+                        <i class="fa-solid fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div class="md:hidden hidden bg-brand-blue border-t border-gray-700" id="mobile-menu">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#home" onclick="toggleMobileMenu()" class="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Home</a>
+                <a href="#services" onclick="toggleMobileMenu()" class="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Services</a>
+                <a href="#gallery" onclick="toggleMobileMenu()" class="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Gallery</a>
+                <a href="#testimonials" onclick="toggleMobileMenu()" class="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Testimonials</a>
+                <a href="#contact" onclick="toggleMobileMenu()" class="text-brand-gold font-bold block px-3 py-2 rounded-md text-base">Contact Us</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative h-screen flex items-center justify-center overflow-hidden">
+        <!-- Background Image with Overlay -->
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1509391366360-2e959784a276?q=80&w=2072&auto=format&fit=crop" 
+                 alt="Solar Panels and Smart Home Technology" 
+                 class="w-full h-full object-cover">
+            <div class="absolute inset-0 hero-overlay"></div>
+        </div>
+
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-4xl md:text-6xl font-extrabold text-white mb-6 leading-tight animate-fade-in-up">
+                Powering Your Future,<br>
+                <span class="text-brand-gold">Securing Your World.</span>
+            </h1>
+            <p class="mt-4 max-w-2xl mx-auto text-xl text-gray-300 mb-10">
+                Kenya's premier partner for Electrical Installations, Advanced CCTV, Electric Fencing, Solar Solutions, and Smart Home Automation.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="#contact" class="px-8 py-4 bg-brand-gold text-brand-blue font-bold rounded-lg shadow-lg hover:bg-yellow-400 transition transform hover:-translate-y-1">
+                    Book a Consultation
+                </a>
+                <a href="#services" class="px-8 py-4 border-2 border-white text-white font-bold rounded-lg hover:bg-white hover:text-brand-blue transition transform hover:-translate-y-1">
+                    Explore Services
+                </a>
+            </div>
+        </div>
+        
+        <!-- Scroll Indicator -->
+        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
+            <a href="#services" class="text-white opacity-70 hover:opacity-100">
+                <i class="fa-solid fa-chevron-down text-2xl"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-brand-gold font-bold tracking-wide uppercase text-sm mb-2">What We Do</h2>
+                <h3 class="text-3xl md:text-4xl font-bold text-brand-blue">Comprehensive Energy & Security Solutions</h3>
+                <p class="mt-4 max-w-2xl mx-auto text-gray-500">We integrate modern technology to make your home and business safer, more efficient, and smarter.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service 1: Electrical -->
+                <div class="service-card group bg-gray-50 p-8 rounded-2xl border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300">
+                    <div class="service-icon w-14 h-14 bg-blue-100 text-blue-600 rounded-xl flex items-center justify-center mb-6 transition-transform duration-300">
+                        <i class="fa-solid fa-plug text-2xl"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Electrical Installations</h4>
+                    <p class="text-gray-600 leading-relaxed">
+                        Expert domestic and commercial wiring, fittings, lighting design, and maintenance. We ensure safety standards (KEBS) are met in every project.
+                    </p>
+                </div>
+
+                <!-- Service 2: CCTV -->
+                <div class="service-card group bg-gray-50 p-8 rounded-2xl border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300">
+                    <div class="service-icon w-14 h-14 bg-red-100 text-red-600 rounded-xl flex items-center justify-center mb-6 transition-transform duration-300">
+                        <i class="fa-solid fa-video text-2xl"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">CCTV Surveillance</h4>
+                    <p class="text-gray-600 leading-relaxed">
+                        High-definition IP cameras with remote viewing capabilities. Monitor your property from your phone anywhere in the world.
+                    </p>
+                </div>
+
+                <!-- Service 3: Electric Fencing -->
+                <div class="service-card group bg-gray-50 p-8 rounded-2xl border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300">
+                    <div class="service-icon w-14 h-14 bg-orange-100 text-orange-600 rounded-xl flex items-center justify-center mb-6 transition-transform duration-300">
+                        <i class="fa-solid fa-shield-halved text-2xl"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Electric Fencing</h4>
+                    <p class="text-gray-600 leading-relaxed">
+                        Top-wall and free-standing electric fences with alarm integration. Robust deterrence against intruders for homes and farms.
+                    </p>
+                </div>
+
+                <!-- Service 4: Solar -->
+                <div class="service-card group bg-gray-50 p-8 rounded-2xl border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300">
+                    <div class="service-icon w-14 h-14 bg-yellow-100 text-yellow-600 rounded-xl flex items-center justify-center mb-6 transition-transform duration-300">
+                        <i class="fa-solid fa-solar-panel text-2xl"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Solar Power</h4>
+                    <p class="text-gray-600 leading-relaxed">
+                        Off-grid and hybrid solar systems, solar water heating, and street lighting. Reduce your bills and rely on clean energy.
+                    </p>
+                </div>
+
+                <!-- Service 5: Smart Home -->
+                <div class="service-card group bg-gray-50 p-8 rounded-2xl border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300">
+                    <div class="service-icon w-14 h-14 bg-green-100 text-green-600 rounded-xl flex items-center justify-center mb-6 transition-transform duration-300">
+                        <i class="fa-solid fa-house-signal text-2xl"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Smart Home Solutions</h4>
+                    <p class="text-gray-600 leading-relaxed">
+                        Automate your lighting, curtains, audio, and security. Control your entire home with voice commands or a simple app.
+                    </p>
+                </div>
+
+                <!-- Service 6: Maintenance -->
+                <div class="service-card group bg-gray-50 p-8 rounded-2xl border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300">
+                    <div class="service-icon w-14 h-14 bg-gray-200 text-gray-700 rounded-xl flex items-center justify-center mb-6 transition-transform duration-300">
+                        <i class="fa-solid fa-screwdriver-wrench text-2xl"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Repairs & Support</h4>
+                    <p class="text-gray-600 leading-relaxed">
+                        24/7 troubleshooting for electrical faults, fence alarms, or solar system issues. We are always just a call away.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Gallery -->
+    <section id="gallery" class="py-24 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-brand-gold font-bold tracking-wide uppercase text-sm mb-2">Our Work</h2>
+                <h3 class="text-3xl md:text-4xl font-bold text-brand-blue">Recent Projects</h3>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Gallery Item 1 -->
+                <div class="relative overflow-hidden rounded-xl h-64 shadow-md group">
+                    <img src="images/solar_panels.jpeg" alt="Solar Installation" class="gallery-img w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <span class="text-white font-bold text-lg">Solar Installation</span>
+                    </div>
+                </div>
+                <!-- Gallery Item 2 -->
+                <div class="relative overflow-hidden rounded-xl h-64 shadow-md group">
+                    <img src="images/cctv_cameras_1.jpeg" alt="CCTV Security" class="gallery-img w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <span class="text-white font-bold text-lg">CCTV Systems</span>
+                    </div>
+                </div>
+                <!-- Gallery Item 3 -->
+                <div class="relative overflow-hidden rounded-xl h-64 shadow-md group">
+                    <img src="images/electricals_1.jpeg" alt="Smart Lighting" class="gallery-img w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <span class="text-white font-bold text-lg">Smart Home Automation</span>
+                    </div>
+                </div>
+                <!-- Gallery Item 4 -->
+                <div class="relative overflow-hidden rounded-xl h-64 shadow-md group">
+                    <img src="images/electricals_2.jpeg" alt="Electrical Wiring" class="gallery-img w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <span class="text-white font-bold text-lg">Commercial Wiring</span>
+                    </div>
+                </div>
+                <!-- Gallery Item 5 -->
+                <div class="relative overflow-hidden rounded-xl h-64 shadow-md group">
+                    <img src="images/fencing_1.jpeg" alt="Electric Fencing" class="gallery-img w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <span class="text-white font-bold text-lg">Electric Fencing</span>
+                    </div>
+                </div>
+                <!-- Gallery Item 6 -->
+                <div class="relative overflow-hidden rounded-xl h-64 shadow-md group">
+                    <img src="images/overview.jpeg" alt="Control Room" class="gallery-img w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <span class="text-white font-bold text-lg">System Maintenance</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-24 bg-brand-blue text-white relative">
+        <!-- Decoration -->
+        <div class="absolute top-0 right-0 -mr-20 -mt-20 w-80 h-80 bg-brand-gold rounded-full opacity-10 blur-3xl"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-16">
+                <h2 class="text-brand-gold font-bold tracking-wide uppercase text-sm mb-2">Testimonials</h2>
+                <h3 class="text-3xl md:text-4xl font-bold">What Our Clients Say</h3>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="bg-slate-800 p-8 rounded-2xl border border-slate-700">
+                    <div class="flex text-brand-gold mb-4">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-gray-300 mb-6 italic">"FochTec is really reliable...quick responses and fair pricing is definitely their slogan...I'd work with them any day"</p>
+                    <div class="flex items-center">
+                        <div class="w-10 h-10 bg-slate-600 rounded-full flex items-center justify-center text-white font-bold">JM</div>
+                        <div class="ml-4">
+                            <p class="font-bold text-white">Jay Maish</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="bg-slate-800 p-8 rounded-2xl border border-slate-700 transform md:-translate-y-4 shadow-xl">
+                    <div class="flex text-brand-gold mb-4">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-gray-300 mb-6 italic">"Excellent technician — very skilled, reliable, and professional in handling electrical work, cctv, and electric fences. I highly recommend."</p>
+                    <div class="flex items-center">
+                        <div class="w-10 h-10 bg-slate-600 rounded-full flex items-center justify-center text-white font-bold">EK</div>
+                        <div class="ml-4">
+                            <p class="font-bold text-white">Edward Koigi</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="bg-slate-800 p-8 rounded-2xl border border-slate-700">
+                    <div class="flex text-brand-gold mb-4">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-gray-300 mb-6 italic">"FochTec installed my CCTV and the service was excellent. The team worked fast, the setup is clear and reliable, and I feel more secure now. I highly recommend them for anyone looking for clean and professional work"</p>
+                    <div class="flex items-center">
+                        <div class="w-10 h-10 bg-slate-600 rounded-full flex items-center justify-center text-white font-bold">JN</div>
+                        <div class="ml-4">
+                            <p class="font-bold text-white">Joe Njoro</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                
+                <!-- Contact Info & Form -->
+                <div>
+                    <h2 class="text-brand-gold font-bold tracking-wide uppercase text-sm mb-2">Get In Touch</h2>
+                    <h3 class="text-3xl md:text-4xl font-bold text-brand-blue mb-6">Ready to Upgrade Your Space?</h3>
+                    <p class="text-gray-600 mb-8">Contact us today for a free site survey and quotation. We reply within 24 hours.</p>
+
+                    <div class="space-y-6 mb-10">
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center text-brand-blue">
+                                <i class="fa-solid fa-phone"></i>
+                            </div>
+                            <div class="ml-4">
+                                <p class="text-sm font-medium text-gray-900">Phone / WhatsApp</p>
+                                <p class="text-lg text-gray-600">+254748 455 370</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center text-brand-blue">
+                                <i class="fa-solid fa-envelope"></i>
+                            </div>
+                            <div class="ml-4">
+                                <p class="text-sm font-medium text-gray-900">Email</p>
+                                <p class="text-lg text-gray-600">fochkaras6@gmail.com</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center text-brand-blue">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                            <div class="ml-4">
+                                <p class="text-sm font-medium text-gray-900">Location</p>
+                                <p class="text-lg text-gray-600">Roysambu</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Contact Form (Visual Only) -->
+                    <form class="space-y-4" onsubmit="event.preventDefault(); alert('Your message has been sent. One of our representatives will get back to you');">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <input type="text" placeholder="Your Name" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-brand-gold focus:ring-2 focus:ring-brand-gold/50 outline-none transition">
+                            <input type="text" placeholder="Phone Number" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-brand-gold focus:ring-2 focus:ring-brand-gold/50 outline-none transition">
+                        </div>
+                        <input type="email" placeholder="Email Address" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-brand-gold focus:ring-2 focus:ring-brand-gold/50 outline-none transition">
+                        <select class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-brand-gold focus:ring-2 focus:ring-brand-gold/50 outline-none transition text-gray-500">
+                            <option>Service Interested In</option>
+                            <option>Electrical Installation</option>
+                            <option>CCTV Systems</option>
+                            <option>Solar Power</option>
+                            <option>Electric Fencing</option>
+                            <option>Smart Home</option>
+                        </select>
+                        <textarea rows="4" placeholder="How can we help you?" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-brand-gold focus:ring-2 focus:ring-brand-gold/50 outline-none transition"></textarea>
+                        <button type="submit" class="w-full bg-brand-blue text-white font-bold py-4 rounded-lg hover:bg-slate-800 transition shadow-lg">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Google Map -->
+                <div class="bg-gray-100 rounded-2xl overflow-hidden shadow-lg h-[500px] lg:h-auto relative">
+                    <!-- Generic Nairobi Map - User can replace src -->
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d49214.10237423777!2d36.84286733642027!3d-1.2128155888048286!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x51a223cfc2638bb%3A0x3e77563cd5464ad0!2sFochTec%2FElectrician%2FFundi%20wa%20stima!5e0!3m2!1sen!2ske!4v1765345606609!5m2!1sen!2ske" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-brand-blue border-t border-gray-800 pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <div class="col-span-1 md:col-span-1">
+                    <div class="flex items-center gap-2 mb-4">
+                        <div class="w-8 h-8 bg-brand-gold rounded flex items-center justify-center text-brand-blue font-bold">
+                           <img src="images/fochtec_logo_white.png" alt="" srcset="">
+                        </div>
+                        <span class="text-white text-xl font-bold tracking-tight">Foch Tec</span>
+                    </div>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        Providing top-tier electrical, security, and solar solutions across Kenya. Quality workmanship guaranteed.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-4">Quick Links</h4>
+                    <ul class="space-y-2 text-gray-400 text-sm">
+                        <li><a href="#home" class="hover:text-brand-gold transition">Home</a></li>
+                        <li><a href="#services" class="hover:text-brand-gold transition">Our Services</a></li>
+                        <li><a href="#gallery" class="hover:text-brand-gold transition">Project Gallery</a></li>
+                        <li><a href="#contact" class="hover:text-brand-gold transition">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-4">Services</h4>
+                    <ul class="space-y-2 text-gray-400 text-sm">
+                        <li>Electrical Installations</li>
+                        <li>CCTV Surveillance</li>
+                        <li>Solar Systems</li>
+                        <li>Electric Fencing</li>
+                        <li>Smart Home</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-4">Connect</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center text-white hover:bg-brand-gold hover:text-brand-blue transition">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center text-white hover:bg-brand-gold hover:text-brand-blue transition">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center text-white hover:bg-brand-gold hover:text-brand-blue transition">
+                            <i class="fa-brands fa-twitter"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-8 text-center">
+                <p class="text-gray-500 text-sm">&copy; <span id="year"></span> Foch Tec. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/254748455370" target="_blank" class="fixed bottom-6 right-6 z-50 bg-green-500 text-white p-4 rounded-full shadow-lg hover:bg-green-600 transition-all hover:scale-110 flex items-center justify-center group">
+        <i class="fa-brands fa-whatsapp text-3xl"></i>
+        <span class="absolute right-full mr-3 bg-white text-gray-800 text-sm px-3 py-1 rounded shadow opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none">
+            Chat on WhatsApp
+        </span>
+    </a>
+
+    <!-- Scripts -->
+    <script>
+        // Set Current Year
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Mobile Menu Toggle
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        }
+
+        // Navbar Scroll Effect
+        window.addEventListener('scroll', function() {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('shadow-md');
+                navbar.classList.remove('py-4');
+            } else {
+                navbar.classList.remove('shadow-md');
+                // navbar.classList.add('py-4'); // Optional padding shift
+            }
+        });
+    </script>
+</body>
+</html>

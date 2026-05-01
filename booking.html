@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Techstacity Media Company | Bookings</title>
+    
+    <!-- Scripts -->
+    <script src="https://js.paystack.co/v1/inline.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font & Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <script>
+        // EmailJS Initialization
+        (function(){
+            emailjs.init("v27s4sghWAvoG-8D_"); 
+        })();
+
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Outfit', 'sans-serif'] },
+                    colors: {
+                        brand: {
+                            blue: '#0f172a',
+                            gold: '#fbbf24',
+                            green: '#22c55e',
+                            light: '#f8fafc',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        .glass-nav { background: rgba(15, 23, 42, 0.95); backdrop-filter: blur(10px); }
+    </style>
+</head>
+<body class="font-sans text-gray-800 bg-gray-50 antialiased">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 glass-nav transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <div class="flex-shrink-0">
+                    <a href="index.html" class="text-white text-2xl font-bold tracking-tight">Techstacity</a>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="index.html" class="text-gray-300 hover:text-brand-gold px-3 py-2 text-sm font-medium">Home</a>
+                        <a href="services.html" class="text-gray-300 hover:text-brand-gold px-3 py-2 text-sm font-medium">Services</a>
+                        <a href="portfolio.html" class="text-gray-300 hover:text-brand-gold px-3 py-2 text-sm font-medium">Our Portfolio</a>
+                        <a href="contact.html" class="bg-green-500 text-brand-blue hover:bg-green-400 px-5 py-2.5 rounded-full text-sm font-bold shadow-lg transition-transform hover:scale-105">Contact Us</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Contact & Payment Section -->
+    <section id="contact" class="py-24 bg-white">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-brand-gold font-bold tracking-wide uppercase text-sm mb-2">Get In Touch</h2>
+                <h3 class="text-3xl md:text-4xl font-bold text-brand-blue">Book your slot today</h3>
+            </div>
+
+            <form id="contact-form" class="space-y-4">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <input type="text" name="user_name" placeholder="Your Name" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-brand-gold focus:ring-2 focus:ring-brand-gold/50 outline-none transition">
+                    <input type="text" name="user_phone" placeholder="Phone Number" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-brand-gold focus:ring-2 focus:ring-brand-gold/50 outline-none transition">
+                </div>
+                <input type="email" name="user_email" placeholder="Email Address" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-brand-gold focus:ring-2 focus:ring-brand-gold/50 outline-none transition">
+                
+                <select name="service" id="service-select" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-brand-gold focus:ring-2 focus:ring-brand-gold/50 outline-none transition text-gray-500">
+                    <option value="" selected disabled>Service Interested In</option>
+                    <option value="Website Development">Website Development</option>
+                    <option value="Social Media Management">Social Media Management</option>
+                    <option value="Social Media Marketing">Social Media Marketing</option>
+                    <option value="Content Strategy">Content Strategy</option>
+                    <option value="Videography">Videography</option>
+                    <option value="Temp">Temporary</option>
+                </select>
+                
+                <textarea name="message" rows="4" placeholder="Please let us know more about your project" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-brand-gold focus:ring-2 focus:ring-brand-gold/50 outline-none transition"></textarea>
+                
+                <!-- Payment UI Box -->
+                <div class="mt-6 p-6 border border-brand-gold/30 rounded-xl bg-slate-50 text-center">
+                    <h4 class="text-brand-blue font-bold mb-2">Estimated Investment</h4>
+                    <p id="price-preview" class="text-2xl font-bold text-green-600 mb-2 hidden"></p> 
+                    <p class="text-xs text-gray-500 mb-6">Clicking the button below will submit your inquiry and open the secure payment portal.</p>
+                    
+                    <button type="button" id="pay-button" onclick="handleInquiryAndPayment(event)" class="w-full bg-green-500 text-white font-bold py-4 rounded-lg hover:bg-green-600 transition shadow-lg transform hover:-translate-y-1 flex items-center justify-center gap-2">
+                        <i class="fa-solid fa-lock text-sm"></i> Secure Inquiry & Pay
+                    </button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-brand-blue border-t border-gray-800 pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <p class="text-gray-500 text-sm">&copy; <span id="year"></span> Techstacity Media Company. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Logic Script -->
+    <script>
+        const servicePrices = {
+            "Website Development": 15000,
+            "Social Media Management": 20000,
+            "Social Media Marketing": 30000,
+            "Content Strategy": 10000,
+            "Videography": 25000,
+            "Temp": 1
+        };
+
+        // UI: Update Price on Selection
+        document.getElementById('service-select').addEventListener('change', function() {
+            const priceDisplay = document.getElementById('price-preview');
+            const price = servicePrices[this.value];
+            if (price) {
+                priceDisplay.textContent = "KES " + price.toLocaleString();
+                priceDisplay.classList.remove('hidden');
+            }
+        });
+
+        // Unified Workflow: EmailJS -> Paystack
+        async function handleInquiryAndPayment(e) {
+            const form = document.getElementById('contact-form');
+            const btn = document.getElementById('pay-button');
+            
+            // Basic data extraction
+            const name = form.user_name.value;
+            const email = form.user_email.value;
+            const service = form.service.value;
+
+            if (!name || !email || !service) {
+                alert("Please fill in your name, email, and select a service.");
+                return;
+            }
+
+            const amountInKes = servicePrices[service];
+            
+            // Visual feedback
+            const originalText = btn.innerHTML;
+            btn.innerHTML = '<i class="fa-solid fa-circle-notch animate-spin"></i> Processing...';
+            btn.disabled = true;
+
+            try {
+                // STEP 1: Send EmailJS Inquiry
+                await emailjs.sendForm('tech_enquiries', 'template_enquiries', form);
+                console.log("Inquiry sent to EmailJS");
+
+                // STEP 2: Launch Paystack
+                let handler = PaystackPop.setup({
+                    key: 'pk_live_0c7001077a32d547c1474f46412efb895a557d67', 
+                    email: email,
+                    amount: amountInKes * 100, // Paystack works in cents
+                    currency: 'KES', 
+                    ref: 'TECH-' + Math.floor((Math.random() * 1000000000) + 1),
+                    metadata: {
+                        custom_fields: [
+                            { display_name: "Service", variable_name: "service", value: service },
+                            { display_name: "Phone", variable_name: "phone", value: form.user_phone.value }
+                        ]
+                    },
+                    callback: function(response) {
+                        alert('Success! Booking confirmed for ' + service + '. Reference: ' + response.reference);
+                        form.reset();
+                        document.getElementById('price-preview').classList.add('hidden');
+                    },
+                    onClose: function() {
+                        alert('Payment window closed. We have received your inquiry and will follow up!');
+                    }
+                });
+                handler.openIframe();
+
+            } catch (error) {
+                alert("Something went wrong. Please try again.");
+                console.error("Workflow Error:", error);
+            } finally {
+                btn.innerHTML = originalText;
+                btn.disabled = false;
+            }
+        }
+
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>

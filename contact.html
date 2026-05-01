@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 <head>
+
+    <!-- Add this near your EmailJS script -->
+    <script src="https://js.paystack.co/v1/inline.js"></script>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Techstacity Media Company | Contact Us</title>
@@ -109,6 +113,8 @@
     <section id="contact" class="py-24 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+
+               
                 
                 <!-- Contact Info & Form -->
                 <div>
@@ -147,6 +153,7 @@
                                 <p class="text-lg text-gray-600">Garden City Mall, Garden Estate</p>
                             </div>
                         </div>
+
                     </div>
 
                     <!-- Contact Form (Visual Only) -->
@@ -179,6 +186,27 @@
                             Send Message
                         </button>
                     </form>
+
+                    
+
+                     <!-- Paystack UI section -->
+                        <div class="mt-6 p-6 border border-brand-gold/30 rounded-xl bg-slate-50">
+                            <h4 class="text-brand-blue font-bold mb-2">Ready to Start?</h4>
+                            <p class="text-sm text-gray-600 mb-4">Pay a commitment fee to fast-track your project.</p>
+                            <div class="mt-6 p-6 border border-brand-gold/30 rounded-xl bg-slate-50">
+                                <h4 class="text-brand-blue font-bold mb-2">Ready to Start?</h4>
+                                <!-- Price shows up here -->
+                                <p id="price-preview" class="text-xl font-bold text-green-600 mb-2 hidden"></p> 
+                                <p class="text-sm text-gray-600 mb-4">Proceed to secure your booking via Paystack.</p>
+                                <button type="button" onclick="payWithPaystack()" ...>
+                                    Pay Securely with Paystack
+                                </button>
+                            </div>
+                            <button type="button" onclick="payWithPaystack()" class="w-full bg-green-500 text-white font-bold py-3 rounded-lg hover:bg-green-600 transition shadow-md">
+                                Pay Securely with Paystack
+                            </button>
+                        </div>
+                        <!-- End of Paystack UI section -->
                 </div>
 
                 <!-- Google Map -->
@@ -297,6 +325,88 @@
                 alert('Failed to send message. Error: ' + JSON.stringify(err));
             });
         });
+
+        // Paystack logic
+        // 1. Define your price list (in KES)
+        const servicePrices = {
+            "Website Development": 15000,
+            "Social Media Management": 20000,
+            "Social Media Marketing": 30000,
+            "Content Strategy": 10000,
+            "Videography": 25000
+        };
+
+        function payWithPaystack() {
+            const form = document.getElementById('contact-form');
+            const email = form.user_email.value;
+            const name = form.user_name.value;
+            const selectedService = form.service.value;
+
+            // 2. Validation
+            if (!email || !name) {
+                alert("Please provide your name and email address first.");
+                return;
+            }
+
+            if (!selectedService || selectedService === "Service Interested In") {
+                alert("Please select a service to see the pricing.");
+                return;
+            }
+
+            // 3. Get the correct price from our list
+            const amountInKes = servicePrices[selectedService];
+
+            let handler = PaystackPop.setup({
+                key: 'pk_live_0c7001077a32d547c1474f46412efb895a557d67', 
+                email: email,
+                amount: amountInKes * 100, // Convert to subunits (cents)
+                currency: 'KES', 
+                ref: 'TECH-' + Math.floor((Math.random() * 1000000000) + 1),
+                metadata: {
+                    custom_fields: [
+                        {
+                            display_name: "Customer Name",
+                            variable_name: "customer_name",
+                            value: name
+                        },
+                        {
+                            display_name: "Service Selected",
+                            variable_name: "service_selected",
+                            value: selectedService
+                        }
+                    ]
+                },
+                callback: function(response) {
+                    alert('Success! You have booked ' + selectedService + '. Ref: ' + response.reference);
+                    
+                    // Send detailed confirmation to yourself
+                    emailjs.send("tech_enquiries", "template_enquiries", {
+                        user_name: name,
+                        user_email: email,
+                        service: selectedService,
+                        message: `PAID KSH ${amountInKes}. Payment Ref: ${response.reference}`
+                    });
+                },
+                onClose: function() {
+                    alert('Transaction cancelled. Your brand is waiting for that spark!');
+                }
+            });
+
+            handler.openIframe();
+        }
+
+        // UI enhancement
+        // Show price dynamically on the UI
+document.getElementsByName('service')[0].addEventListener('change', function() {
+    const priceDisplay = document.getElementById('price-preview');
+    const price = servicePrices[this.value];
+    if (price) {
+        priceDisplay.textContent = "Cost: KES " + price.toLocaleString();
+        priceDisplay.classList.remove('hidden');
+    }
+});
+
+
     </script>
 
 </body>

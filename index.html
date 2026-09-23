@@ -22,7 +22,7 @@
             theme: {
                 extend: {
                     fontFamily: {
-                        sans: ['Outfit', 'sans-serif'],
+                        sans: ['Arial', 'sans-serif'],
                     },
                     colors: {
                         brand: {
@@ -72,10 +72,7 @@
                 <!-- Desktop Menu -->
                 <div class="hidden md:block">
                     <div class="ml-10 flex items-baseline space-x-8">
-                        <a href="about.html" class="text-gray-300 hover:text-brand-gold px-3 py-2 rounded-md text-sm font-medium transition-colors">About</a>
-                        <a href="services.html" class="text-gray-300 hover:text-brand-gold px-3 py-2 rounded-md text-sm font-medium transition-colors">Services</a>
                         <a href="portfolio.html" class="text-gray-300 hover:text-brand-gold px-3 py-2 rounded-md text-sm font-medium transition-colors">Our Portfolio</a>
-                        <a href="#testimonials" class="text-gray-300 hover:text-brand-gold px-3 py-2 rounded-md text-sm font-medium transition-colors">Testimonials</a>
                         <a href="contact.html" class="text-gray-300 hover:text-brand-gold px-3 py-2 rounded-md text-sm font-medium transition-colors">
                             Contact Us
                         </a>
@@ -97,10 +94,8 @@
         <!-- Mobile Menu -->
         <div class="md:hidden hidden bg-brand-blue border-t border-gray-700" id="mobile-menu">
             <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-                <a href="about.html" onclick="toggleMobileMenu()" class="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">About</a>
                 <a href="services.html" onclick="toggleMobileMenu()" class="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Services</a>
                 <a href="portfolio.html" onclick="toggleMobileMenu()" class="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Portfolio</a>
-                <a href="#testimonials" onclick="toggleMobileMenu()" class="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Testimonials</a>
                 <a href="contact.html" onclick="toggleMobileMenu()" class="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Contact Us</a>
                 <a href="booking.html" onclick="toggleMobileMenu()" class="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Booking</a>
             </div>
@@ -111,15 +106,420 @@
     <section id="home" class="relative h-screen flex items-center justify-center overflow-hidden">
         <!-- Background Image with Overlay -->
         <div class="absolute inset-0 z-0">
-            <video src="images/montage.mp4" 
-                   alt="Techstacity Media Agency office layout" 
-                   class="w-full h-full object-cover" 
-                   autoplay muted loop>
+            <img src="images/hero_image.jpeg" 
+                 alt="Techstacity Media Agency office layout" 
+                 class="w-full h-full object-cover">
             <div class="absolute inset-0 hero-overlay"></div>
         </div>
 
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-4xl md:text-6xl font-extrabold text-white mb-6 leading-tight animate-fade-in-up">
+               Who We Are<br>
+                
+            </h1>
+            <p class="mt-4 max-w-2xl mx-auto text-xl text-gray-300 mb-10">
+                We are a creative design and print industry located in Nairobi. We specialize in branded merchandise, digital marketing, website development and graphic design. Our mission is to solve businesses' needs of reach, response and revenue.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="https://wa.me/254758130962?text=Greetings? I would love to discuss my project with you." class="px-8 py-4 bg-green-500 text-brand-blue font-bold rounded-lg shadow-lg hover:bg-green-400 transition transform hover:-translate-y-1">
+                    Let's Discuss Your Project
+                </a>
+                <a href="#services" class="px-8 py-4 border-2 border-white text-white font-bold rounded-lg hover:bg-white hover:text-brand-blue transition transform hover:-translate-y-1">
+                    Explore Services
+                </a>
+            </div>
+        </div>
     </section>
 
+    <!-- Services Section -->
+     <section id="services" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+               
+                <h3 class="text-3xl md:text-4xl font-bold text-brand-blue">What We Do/Offer</h3>
+                
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service 1: Brand Identity & Logo Design -->
+                <div class="service-card group bg-gray-50 p-8 rounded-2xl border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300">
+                    <div class="service-icon w-14 h-14 bg-green-100 text-green-600 rounded-xl flex items-center justify-center mb-6 transition-transform duration-300">
+                        <i class="fa-solid fa-bolt text-2xl"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Brand Identity & Logo Design</h4>
+                    <p class="text-gray-600 leading-relaxed">
+                        Crafting the visual DNA of your business.
+                    </p>
+                </div>
+
+                <!-- Service 2: SEO & SEM -->
+                <div class="service-card group bg-gray-50 p-8 rounded-2xl border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300">
+                    <div class="service-icon w-14 h-14 bg-green-100 text-green-600 rounded-xl flex items-center justify-center mb-6 transition-transform duration-300">
+                        <i class="fa-solid fa-laptop text-2xl"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">SEO & SEM</h4>
+                    <p class="text-gray-600 leading-relaxed">
+                        Assisting your brand to rank high in Google searches with targeted keywords.
+                    </p>
+                </div>
+
+                <!-- Service 3: Content Strategy -->
+                <div class="service-card group bg-gray-50 p-8 rounded-2xl border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300">
+                    <div class="service-icon w-14 h-14 bg-green-100 text-green-600 rounded-xl flex items-center justify-center mb-6 transition-transform duration-300">
+                        <i class="fa-solid fa-mobile-phone text-2xl"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Content Strategy</h4>
+                    <p class="text-gray-600 leading-relaxed">
+                        We come up with relatable content copy which resonates with your brand and everyday life.
+                    </p>
+                </div>
+
+                <!-- Service 4: Motion Graphics -->
+                <div class="service-card group bg-gray-50 p-8 rounded-2xl border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300">
+                    <div class="service-icon w-14 h-14 bg-green-100 text-green-600 rounded-xl flex items-center justify-center mb-6 transition-transform duration-300">
+                        <i class="fa-solid fa-film text-2xl"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Videography</h4>
+                    <p class="text-gray-600 leading-relaxed">
+                        We plan, shoot and edit videos for your brand, which can be used for social media, ads and campaigns.
+                    </p>
+                </div>
+
+                <!-- Service 5: Full-Stack Digital Marketing -->
+                <div class="service-card group bg-gray-50 p-8 rounded-2xl border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300">
+                    <div class="service-icon w-14 h-14 bg-green-100 text-green-600 rounded-xl flex items-center justify-center mb-6 transition-transform duration-300">
+                        <i class="fa-solid fa-square-rss text-2xl"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Full-Stack Digital Marketing</h4>
+                    <p class="text-gray-600 leading-relaxed">
+                        We assist in handling your social media accounts, creating content and running ads to increase your brand reach and revenue.
+                    </p>
+                </div>
+
+                <!-- Service 6: Website Development -->
+                <div class="service-card group bg-gray-50 p-8 rounded-2xl border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300">
+                    <div class="service-icon w-14 h-14 bg-green-100 text-green-600 rounded-xl flex items-center justify-center mb-6 transition-transform duration-300">
+                        <i class="fa-solid fa-code text-2xl"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Website Development</h4>
+                    <p class="text-gray-600 leading-relaxed">
+                        Your digital storefront for clients and customers, which sells your brand 24/7
+                    </p>
+                </div>
+              
+            </div>
+        </div>
+    </section>
+
+    
+    <!-- Project Gallery -->
+    <section id="gallery" class="py-24 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+            <div class="flex flex-col">
+                <div class="relative overflow-hidden rounded-xl h-64 shadow-md group mb-4">
+                    <img src="images/website_fochtec.png" alt="Website Design" class="gallery-img w-full h-full object-cover">
+                    
+                </div>
+                <h4 class="text-lg font-bold text-brand-blue">Website Design</h4>
+                <h4 class="text-lg font-bold text-brand-blue"><a href="https://wa.me/254758130962?text=Greetings? I would like a website for my business. How are we moving forward with this?" target="_blank">Enquire</a></h4>
+            </div>
+
+            <div class="flex flex-col">
+                <div class="relative overflow-hidden rounded-xl h-64 shadow-md group mb-4">
+                    <img src="images/jullz_honey.png" alt="Brand Strategy" class="gallery-img w-full h-full object-cover">
+                   
+                </div>
+                <h4 class="text-lg font-bold text-brand-blue">Brand Guide Design</h4>
+                <h4 class="text-lg font-bold text-brand-blue"><a href="https://wa.me/254758130962?text=Greetings? I would like to enquire about Brand guide design. Please advise accordingly" target="_blank">Enquire</a></h4>
+            </div>
+
+            <div class="flex flex-col">
+                <div class="relative overflow-hidden rounded-xl h-64 shadow-md group mb-4">
+                    <img src="images/mwas_autos.png" alt="Logo Design" class="gallery-img w-full h-full object-cover">
+                   
+                </div>
+                <h4 class="text-lg font-bold text-brand-blue">Logo Design</h4>
+                <h4 class="text-lg font-bold text-brand-blue"><a href="https://wa.me/254758130962?text=I would like to get a logo for my business. Please advise accordingly." target="_blank">Enquire</a></h4>
+            </div>
+            
+            <div class="flex flex-col">
+                <div class="relative overflow-hidden rounded-xl h-64 shadow-md group mb-4">
+                    <img src="images/business_cards.png" alt="Business Cards" class="gallery-img w-full h-full object-cover">
+                   
+                </div>
+                <h4 class="text-lg font-bold text-brand-blue">Business Cards</h4>
+                <h4 class="text-lg font-bold text-brand-blue"><a href="https://wa.me/254758130962?text=Greetings? I would like a set of business cards for my brand. How are we moving forward with this?" target="_blank">Enquire</a></h4>
+            </div>
+
+            <div class="flex flex-col">
+                <div class="relative overflow-hidden rounded-xl h-64 shadow-md group mb-4">
+                    <img src="images/outdoor_branding.png" alt="Outdoor Branding" class="gallery-img w-full h-full object-cover">
+                   
+                </div>
+                <h4 class="text-lg font-bold text-brand-blue">Outdoor branding</h4>
+                <h4 class="text-lg font-bold text-brand-blue"><a href="https://wa.me/254758130962?text=Greetings? I would like an outdoor brand strategy for my business" target="_blank">Enquire</a></h4>
+            </div>
+
+            <div class="flex flex-col">
+                <div class="relative overflow-hidden rounded-xl h-64 shadow-md group mb-4">
+                    <img src="images/company_profiles.png" alt="Company Profiles" class="gallery-img w-full h-full object-cover">
+                   
+                </div>
+                <h4 class="text-lg font-bold text-brand-blue">Company Profiles Design</h4><h4 class="text-lg font-bold text-brand-blue"><a href="https://wa.me/254758130962?text=Greetings? I wish to procure a company profile. What is needed so that we set it up?" target="_blank">Enquire</a></h4>
+            </div>
+
+            <div class="flex flex-col">
+                <div class="relative overflow-hidden rounded-xl h-64 shadow-md group mb-4">
+                    <img src="images/banners_design.png" alt="Banners Design" class="gallery-img w-full h-full object-cover">
+                   
+                </div>
+                <h4 class="text-lg font-bold text-brand-blue">Banners Branding</h4>
+                <h4 class="text-lg font-bold text-brand-blue"><a href="https://wa.me/254758130962?text=Greetings? I would like a banner to advertise my business. How are we moving forward with this?" target="_blank">Enquire</a></h4>
+            </div>
+
+            <div class="flex flex-col">
+                <div class="relative overflow-hidden rounded-xl h-64 shadow-md group mb-4">
+                    <img src="images/product_labels.png" alt="Product Labels" class="gallery-img w-full h-full object-cover">
+                   
+                </div>
+                <h4 class="text-lg font-bold text-brand-blue">Product Labels</h4>
+                <h4 class="text-lg font-bold text-brand-blue"><a href="https://wa.me/254758130962?text=Greetings? I need product lables and stickers for my brand." target="_blank">Enquire</a></h4>
+            </div>
+
+            <div class="flex flex-col">
+                <div class="relative overflow-hidden rounded-xl h-64 shadow-md group mb-4">
+                    <img src="images/letterheads_design.png" alt="Letterheads Design" class="gallery-img w-full h-full object-cover">
+                   
+                </div>
+                <h4 class="text-lg font-bold text-brand-blue">Letterheads Design</h4>
+                <h4 class="text-lg font-bold text-brand-blue"><a href="https://wa.me/254758130962?text=Greetings? Please assist us to set up a package of letterheads. Thank you." target="_blank">Enquire</a></h4>
+            </div>
+
+            <div class="flex flex-col">
+                <div class="relative overflow-hidden rounded-xl h-64 shadow-md group mb-4">
+                    <img src="images/video_editing.png" alt="Video Editing" class="gallery-img w-full h-full object-cover">
+                   
+                </div>
+                <h4 class="text-lg font-bold text-brand-blue">Video Editing</h4>
+                <h4 class="text-lg font-bold text-brand-blue"><a href="https://wa.me/254758130962?text=Greetings? I would like a video ad for my campaign. What's needed?" target="_blank">Enquire</a></h4>
+            </div>
+
+            </div>
+        </div>
+    </section>
+
+     <!-- Testimonials Section -->
+    <section id="testimonials" class="py-24 bg-brand-blue text-white relative overflow-hidden">
+        <!-- Decoration -->
+        <div class="absolute top-0 right-0 -mr-20 -mt-20 w-80 h-80 bg-brand-gold rounded-full opacity-10 blur-3xl"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-16">
+                <h2 class="text-brand-gold font-bold tracking-wide uppercase text-sm mb-2">Testimonials</h2>
+                <h3 class="text-3xl md:text-4xl font-bold">What Our Clients Say</h3>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="bg-slate-800 p-8 rounded-2xl border border-slate-700">
+                    <div class="flex text-brand-gold mb-4">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-gray-300 mb-6 italic">"I can vouch for creative direction Techstacity gave us in regards to our product Jullz Honey. Much appreciated"</p>
+                    <div class="flex items-center">
+                        <div class="w-10 h-10 bg-slate-600 rounded-full flex items-center justify-center text-white font-bold">JW</div>
+                        <div class="ml-4">
+                            <p class="font-bold text-white">Julie Wanjiku, Jullz Honey</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="bg-slate-800 p-8 rounded-2xl border border-slate-700 transform md:-translate-y-4 shadow-xl">
+                    <div class="flex text-brand-gold mb-4">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-gray-300 mb-6 italic">"With a solid brand profile created by Techstacity, our client trust has increased by 47%. This is an encouragement."</p>
+                    <div class="flex items-center">
+                        <div class="w-10 h-10 bg-slate-600 rounded-full flex items-center justify-center text-white font-bold">EK</div>
+                        <div class="ml-4">
+                            <p class="font-bold text-white">Edward Koigi, SpaceYaMagari</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="bg-slate-800 p-8 rounded-2xl border border-slate-700">
+                    <div class="flex text-brand-gold mb-4">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-gray-300 mb-6 italic">"If you are looking to set up your website, Techstacity comes in clutch. We were able to set up our digital presence for our home security clients to view our catalog."</p>
+                    <div class="flex items-center">
+                        <div class="w-10 h-10 bg-slate-600 rounded-full flex items-center justify-center text-white font-bold">FK</div>
+                        <div class="ml-4">
+                            <p class="font-bold text-white">Foch Karas, Fochtec</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 4 -->
+                <div class="bg-slate-800 p-8 rounded-2xl border border-slate-700">
+                    <div class="flex text-brand-gold mb-4">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-gray-300 mb-6 italic">"The team at Techstacity was able to capture our recent VBS children's event, and did a great job on videography."</p>
+                    <div class="flex items-center">
+                        <div class="w-10 h-10 bg-slate-600 rounded-full flex items-center justify-center text-white font-bold">B</div>
+                        <div class="ml-4">
+                            <p class="font-bold text-white">Bible Baptist Church Wendani</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 5 -->
+                <div class="bg-slate-800 p-8 rounded-2xl border border-slate-700">
+                    <div class="flex text-brand-gold mb-4">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-gray-300 mb-6 italic">"We were able to increase our firm's branding by 43.2% after the team handled our brand identity design. We are grateful for their professionalism and creativity."</p>
+                    <div class="flex items-center">
+                        <div class="w-10 h-10 bg-slate-600 rounded-full flex items-center justify-center text-white font-bold">HM</div>
+                        <div class="ml-4">
+                            <p class="font-bold text-white">Halima, FourWinss Communication</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 6 -->
+                <div class="bg-slate-800 p-8 rounded-2xl border border-slate-700">
+                    <div class="flex text-brand-gold mb-4">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-gray-300 mb-6 italic">"I got my brand logo and guidelines from Techstacity, and they exceeded my expectations. Highly recommended!"</p>
+                    <div class="flex items-center">
+                        <div class="w-10 h-10 bg-slate-600 rounded-full flex items-center justify-center text-white font-bold">M</div>
+                        <div class="ml-4">
+                            <p class="font-bold text-white">Muuo K, Glorious Praise</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                
+                <!-- Contact Info & Form -->
+                <div>
+                    <h2 class="text-brand-gold font-bold tracking-wide uppercase text-sm mb-2">Get In Touch</h2>
+                    <h3 class="text-3xl md:text-4xl font-bold text-brand-blue mb-6">Ready to Redefine Your Presence?</h3>
+                    <p class="text-gray-600 mb-8">The digital landscape is crowded, but your brand doesn't have to be. We combine bold aesthetics with functional design to ensure you aren't just seen—you're remembered. Let's build something iconic together.</p>
+
+                    <div class="space-y-6 mb-10">
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center text-brand-blue">
+                                <i class="fa-solid fa-phone"></i>
+                            </div>
+                            <div class="ml-4">
+                                <p class="text-sm font-medium text-gray-900">Phone / WhatsApp</p>
+                                <p class="text-lg text-gray-600">+254758 130 962</p>
+                                <p class="text-lg text-gray-600">+254703 924 543</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center text-brand-blue">
+                                <i class="fa-solid fa-envelope"></i>
+                            </div>
+                            <div class="ml-4">
+                                <p class="text-sm font-medium text-gray-900">Email</p>
+                                <p class="text-lg text-gray-600">techstacitymediaagency@gmail.com</p>
+                                <p class="text-lg text-gray-600">techstacity.yt@gmail.com</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center text-brand-blue">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                            <div class="ml-4">
+                                <p class="text-sm font-medium text-gray-900">Location</p>
+                                <p class="text-lg text-gray-600">Sarit Centre, Westlands</p>
+                                <p class="text-lg text-gray-600">Garden City Mall, Garden Estate</p>
+                            </div>
+                        </div>
+                    </div>
+
+                   
+                </div>
+
+                <!-- Google Map -->
+                <div class="bg-gray-100 rounded-2xl overflow-hidden shadow-lg h-[500px] lg:h-auto relative">
+                    <!-- Generic Nairobi Map -->
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d1610.6467384007785!2d36.801625957520805!3d-1.2612691998170786!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2ske!4v1775507751968!5m2!1sen!2ske" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-brand-blue border-t border-gray-800 pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <div class="col-span-1 md:col-span-1">
+                    <div class="flex items-center gap-2 mb-4">
+                       
+                       <span class="text-white text-2xl font-bold tracking-tight"><a href="index.html">Techstacity</a></span>
+                    </div>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                       Innovation is not just about the tools we use, but the stories we tell with them. Techstacity exists at the intersection of aesthetic brilliance and technical precision.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-4">Quick Links</h4>
+                    <ul class="space-y-2 text-gray-400 text-sm">
+                        <li><a href="portfolio.html" class="hover:text-brand-gold transition">Our Portfolio</a></li>
+                        <li><a href="contact.html" class="hover:text-brand-gold transition">Contact Us</a></li>
+                        <li><a href="booking.html" class="hover:text-brand-gold transition">Booking</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-4">Services</h4>
+                    <ul class="space-y-2 text-gray-400 text-sm">
+                        <li>Digital Marketing</li>
+                        <li>Social Media Management</li>
+                        <li>Content Strategy</li>
+                        <li>Website Development</li>
+                        <li>Brand Identity</li>
+                        <li>Logo Design</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-4">Connect</h4>
+                    <div class="flex space-x-4">
+                        <a href="https://www.facebook.com/techstacity1" target="blank" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center text-white hover:bg-green-500 hover:text-brand-blue transition">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </a>
+                       
+                        <a href="https://x.com/techstacity1" target="blank" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center text-white hover:bg-green-500 hover:text-brand-blue transition">
+                            <i class="fa-brands fa-twitter"></i>
+                        </a>
+
+                        <a href="https://tiktok.com/@techstacity" target="blank" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center text-white hover:bg-green-500 hover:text-brand-blue transition">
+                            <i class="fa-brands fa-tiktok"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-8 text-center">
+                <p class="text-gray-500 text-sm">&copy; <span id="year"></span> Techstacity Media Company. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
 
     <!-- WhatsApp Floating Button -->
     <a href="https://wa.me/254758130962?text=I would like to learn more about branding" target="_blank" class="fixed bottom-6 right-6 z-50 bg-green-500 text-white p-4 rounded-full shadow-lg hover:bg-green-600 transition-all hover:scale-110 flex items-center justify-center group">

@@ -294,9 +294,9 @@
                                         <i class="fa-solid fa-layer-group"></i>
                                     </div>
                                     <select id="experience" onchange="updateCoursePrice()" class="w-full glass-input pl-10 pr-4 py-3 rounded-xl text-sm text-white focus:outline-none bg-slate-900 appearance-none">
-                                        <option value="Beginner">Beginner ($150 USD)</option>
-                                        <option value="Intermediate" selected>Intermediate ($300 USD)</option>
-                                        <option value="Pro">Pro / Content Creator ($500 USD)</option>
+                                        <option value="Beginner">Beginner (KES 2,500)</option>
+                                        <option value="Intermediate" selected>Intermediate (KES 3,500)</option>
+                                        <option value="Pro">Pro / Content Creator (KES 5,000)</option>
                                     </select>
                                     <div class="absolute inset-y-0 right-0 pr-3.5 flex items-center pointer-events-none text-slate-500">
                                         <i class="fa-solid fa-chevron-down text-xs"></i>
@@ -309,13 +309,13 @@
                                 <div class="flex items-center justify-between">
                                     <span class="text-slate-400">USD Price:</span>
                                     <div>
-                                        <span id="originalPriceDisplay" class="text-slate-500 line-through mr-1.5">$450</span>
-                                        <span id="currentUsdDisplay" class="text-white font-semibold">$300 USD</span>
+                                        <span id="originalPriceDisplay" class="text-slate-500 line-through mr-1.5">$23.11</span>
+                                        <span id="currentUsdDisplay" class="text-white font-semibold">$19.26 USD</span>
                                     </div>
                                 </div>
                                 <div class="flex items-center justify-between border-t border-slate-800/80 pt-1.5">
                                     <span class="text-slate-400 font-medium">Checkout Amount (KES):</span>
-                                    <span id="currentKesDisplay" class="text-cyan-400 font-bold text-sm">KES 39,000</span>
+                                    <span id="currentKesDisplay" class="text-cyan-400 font-bold text-sm">KES 3,000</span>
                                 </div>
                             </div>
 
@@ -486,11 +486,11 @@
                 </div>
                 <div class="flex justify-between border-b border-slate-800 pb-2">
                     <span class="text-slate-400">USD Tier Value:</span>
-                    <span id="modalUsd" class="text-slate-300 font-medium">$300 USD</span>
+                    <span id="modalUsd" class="text-slate-300 font-medium">$25 USD</span>
                 </div>
                 <div class="flex justify-between">
                     <span class="text-slate-400">Total Paid (KES):</span>
-                    <span id="modalAmount" class="text-cyan-400 font-bold">KES 39,000</span>
+                    <span id="modalAmount" class="text-cyan-400 font-bold">KES 3,250</span>
                 </div>
             </div>
 
@@ -530,9 +530,9 @@
 
         // Tier Pricing Map (in USD)
         const pricingMap = {
-            'Beginner': { priceUSD: 150, originalUSD: 250 },
-            'Intermediate': { priceUSD: 300, originalUSD: 450 },
-            'Pro': { priceUSD: 500, originalUSD: 750 }
+            'Beginner': { priceUSD: 19.5, originalUSD: 24 },
+            'Intermediate': { priceUSD: 27, originalUSD: 30 },
+            'Pro': { priceUSD: 39, originalUSD: 50 }
         };
 
         // Format Number with Commas
